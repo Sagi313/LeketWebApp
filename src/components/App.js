@@ -1,16 +1,7 @@
 import React from "react";
-import Register from "./Register";
-import "./App.css";
-import { AuthProvider } from "../contexts/AuthContext";
 
 function App() {
-  return (
-    <AuthProvider>
-      <div className="app">
-        <Register />
-      </div>
-    </AuthProvider>
-  );
+  return <h1>~~Leket Israel~~</h1>;
 }
 
 export default App;
