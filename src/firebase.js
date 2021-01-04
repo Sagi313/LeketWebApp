@@ -2,12 +2,12 @@ import firebase from "firebase/app";
 import "firebase/auth";
 
 const app = firebase.initializeApp({
-  apiKey: process.env.fire_base_apiKey,
-  authDomain: process.env.fire_base_authDomain,
-  projectId: process.env.fire_base_projectId,
-  storageBucket: process.env.fire_base_storageBucket,
-  messagingSenderId: process.env.fire_base_messagingSenderId,
-  appId: process.env.fire_base_appId,
+  apiKey: "AIzaSyBRAx93drF1lKxLic3PBsWJYsQt5WVTxp0",
+  authDomain: "leket-israel.firebaseapp.com",
+  projectId: "leket-israel",
+  storageBucket: "leket-israel.appspot.com",
+  messagingSenderId: "16655398559",
+  appId: "1:16655398559:web:6d3a736da113d805ddd4aa",
 });
 
 export const auth = app.auth();
