@@ -1,0 +1,23 @@
+.app {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  border-style: dashed;
+}
+
+#email {
+}
+
+body {
+  background-color: rgb(71, 182, 67);
+}
+
+h2 {
+  color: white;
+  font-family: "Times New Roman";
+  text-align: center;
+}
+
+div {
+  text-align: right;
+}

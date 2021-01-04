@@ -43,11 +43,11 @@ export default function UpdateProfile() {
   return (
     <>
       <div>
-        <h2>Update Profile</h2>
+        <h2>עדכן פרופיל</h2>
         {error && <p variant="danger">{error}</p>}
         <form onSubmit={handleSubmit}>
           <div id="email">
-            <p>Email</p>
+            <p>אימייל</p>
             <input
               type="email"
               ref={emailRef}
@@ -56,7 +56,7 @@ export default function UpdateProfile() {
             />
           </div>
           <div id="password">
-            <p>Password</p>
+            <p>סיסמא</p>
             <input
               type="password"
               ref={passwordRef}
@@ -64,7 +64,7 @@ export default function UpdateProfile() {
             />
           </div>
           <div id="password-confirm">
-            <p>Password Confirmation</p>
+            <p>אימות סיסמא</p>
             <input
               type="password"
               ref={passwordConfirmRef}
@@ -72,12 +72,12 @@ export default function UpdateProfile() {
             />
           </div>
           <button disabled={loading} type="submit">
-            Update
+            עדכן
           </button>
         </form>
       </div>
       <div>
-        <Link to="/">Cancel</Link>
+        <Link to="/">ביטול</Link>
       </div>
     </>
   );

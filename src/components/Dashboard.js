@@ -24,11 +24,11 @@ export default function Dashboard() {
         <h2>Profile</h2>
         {error && <p variant="danger">{error}</p>}
         <strong>Email:</strong> {currentUser.email}
-        <Link to="/update-profile">Update Profile</Link>
+        <Link to="/update-profile">עדכן פרופיל</Link>
       </div>
       <div>
         <button variant="link" onClick={handleLogout}>
-          Log Out
+          התנתק
         </button>
       </div>
     </div>

@@ -7,10 +7,11 @@ import Login from "./Login";
 import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile";
+import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <div>
         <Router>
           <AuthProvider>

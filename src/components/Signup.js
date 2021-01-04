@@ -33,28 +33,28 @@ export default function Signup() {
   return (
     <div>
       <div>
-        <h2>Sign Up</h2>
+        <h2>הרשמה</h2>
         {error && <p variant="danger">{error}</p>}
         <form onSubmit={handleSubmit}>
           <div id="email">
-            <p>Email</p>
+            <p>אימייל</p>
             <input type="email" ref={emailRef} required />
           </div>
           <div id="password">
-            <p>Password</p>
+            <p>סיסמא</p>
             <input type="password" ref={passwordRef} required />
           </div>
           <div id="password-confirm">
-            <p>Password Confirmation</p>
+            <p>אימות סיסמא</p>
             <input type="password" ref={passwordConfirmRef} required />
           </div>
           <button disabled={loading} type="submit">
-            Sign Up
+            הירשם
           </button>
         </form>
       </div>
       <div>
-        Already have an account? <Link to="/login">Log In</Link>
+        יש לך חשבון? <Link to="/login">התחברות</Link>
       </div>
     </div>
   );

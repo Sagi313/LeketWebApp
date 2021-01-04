@@ -28,24 +28,24 @@ export default function ForgotPassword() {
   return (
     <div>
       <div>
-        <h2>Password Reset</h2>
+        <h2>איפוס סיסמא</h2>
         {error && <p variant="danger">{error}</p>}
         {message && <p variant="success">{message}</p>}
         <form onSubmit={handleSubmit}>
           <div id="email">
-            <p>Email</p>
+            <p>אימייל</p>
             <input type="email" ref={emailRef} required />
           </div>
           <button disabled={loading} type="submit">
-            Reset Password
+            אפס סיסמא
           </button>
         </form>
         <div>
-          <Link to="/login">Login</Link>
+          <Link to="/login">התחבר</Link>
         </div>
       </div>
       <div>
-        Need an account? <Link to="/signup">Sign Up</Link>
+        אין לך חשבון? <Link to="/signup">הירשם</Link>
       </div>
     </div>
   );
