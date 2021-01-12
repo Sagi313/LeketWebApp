@@ -1,23 +1,78 @@
-.app {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  border-style: dashed;
-}
-
 #email {
+}
+.app {
+  background: transparent linear-gradient(158deg, #ffffff8c 0%, #ffffffbf 100%)
+    0% 0% no-repeat padding-box;
+  border-radius: 22px;
+  opacity: 0.9;
 }
 
 body {
-  background-color: rgb(71, 182, 67);
+  background: transparent
+    linear-gradient(
+      229deg,
+      var(--unnamed-color-57d18c) 0%,
+      var(--unnamed-color-39524f) 100%
+    )
+    0% 0% no-repeat padding-box;
+  background: transparent linear-gradient(229deg, #57d18c 0%, #39524f 100%) 0%
+    0% no-repeat padding-box;
+  border: 1px solid #707070;
 }
 
+input {
+  width: 343px;
+  height: 40px;
+  background: #ffffffa6 0% 0% no-repeat padding-box;
+  border-radius: 26px;
+}
+
+button {
+  width: 165px;
+  height: 48px;
+  background: var(--unnamed-color-39524f) 0% 0% no-repeat padding-box;
+  background: #39524f 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px #00000029;
+  border-radius: 10px;
+
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
+    22px / var(--unnamed-line-spacing-30) var(--unnamed-font-family-segoe-ui);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-ffffff);
+  font: normal normal 600 22px/30px Segoe UI;
+  color: #ffffff;
+}
 h2 {
-  color: white;
-  font-family: "Times New Roman";
-  text-align: center;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
+    var(--unnamed-font-size-34) / var(--unnamed-line-spacing-46)
+    var(--unnamed-font-family-segoe-ui);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-39524f);
+  font: normal normal bold 34px/46px Segoe UI;
+  color: #39524f;
 }
 
 div {
+  text-align: center;
+}
+
+.login-screen-text {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
+    22px / var(--unnamed-line-spacing-50) var(--unnamed-font-family-segoe-ui);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-39524f);
   text-align: right;
+  font: normal normal 600 22px/50px Segoe UI;
+  color: #39524f;
+  text-align: center;
+}
+
+.Signup-info-text {
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
+    var(--unnamed-font-size-24) / var(--unnamed-line-spacing-50)
+    var(--unnamed-font-family-segoe-ui);
+  letter-spacing: var(--unnamed-character-spacing-0);
+  color: var(--unnamed-color-39524f);
+  font: normal normal 600 24px/50px Segoe UI;
+  color: #39524f;
 }

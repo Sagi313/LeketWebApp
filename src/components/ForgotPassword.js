@@ -28,24 +28,25 @@ export default function ForgotPassword() {
   return (
     <div>
       <div>
-        <h2>איפוס סיסמא</h2>
+        <h2>העמותה למען חיות הבר</h2>
+        <h2>שכחת סיסמא?</h2>
         {error && <p variant="danger">{error}</p>}
         {message && <p variant="success">{message}</p>}
         <form onSubmit={handleSubmit}>
           <div id="email">
-            <p>אימייל</p>
+            <p>מלא/י את כתובת המייל שלך ונשלח לך את הסיסמא לשם</p>
             <input type="email" ref={emailRef} required />
           </div>
           <button disabled={loading} type="submit">
-            אפס סיסמא
+            שליחה
           </button>
         </form>
         <div>
           <Link to="/login">התחבר</Link>
         </div>
       </div>
-      <div>
-        אין לך חשבון? <Link to="/signup">הירשם</Link>
+      <div className="login-screen-text">
+        עוד לא נרשמת? הרשם<Link to="/signup"> כאן </Link>
       </div>
     </div>
   );

@@ -33,23 +33,36 @@ export default function Signup() {
   return (
     <div>
       <div>
+        <h2>העמותה למען חיות הבר</h2>
         <h2>הרשמה</h2>
         {error && <p variant="danger">{error}</p>}
         <form onSubmit={handleSubmit}>
           <div id="email">
-            <p>אימייל</p>
+            <p className="Signup-info-text">שם ושם משפחה</p>
+            <input type="text" />
+          </div>
+          <div id="email">
+            <p className="Signup-info-text">אימייל</p>
             <input type="email" ref={emailRef} required />
           </div>
+          <div id="phoneNum">
+            <p className="Signup-info-text">טלפון</p>
+            <input type="text" />
+          </div>
+          <div id="birthDate">
+            <p className="Signup-info-text">תאריך לידה</p>
+            <input type="text" />
+          </div>
           <div id="password">
-            <p>סיסמא</p>
+            <p className="Signup-info-text">סיסמא</p>
             <input type="password" ref={passwordRef} required />
           </div>
           <div id="password-confirm">
-            <p>אימות סיסמא</p>
+            <p className="Signup-info-text">אימות סיסמא</p>
             <input type="password" ref={passwordConfirmRef} required />
           </div>
           <button disabled={loading} type="submit">
-            הירשם
+            הרשמה
           </button>
         </form>
       </div>

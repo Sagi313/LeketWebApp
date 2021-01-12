@@ -28,27 +28,26 @@ export default function Login() {
   return (
     <div>
       <div>
+        <h2>העמותה למען חיות הבר</h2>
         <h2>התחברות</h2>
         {error && <p variant="danger">{error}</p>}
         <form onSubmit={handleSubmit}>
           <div id="email">
-            <p>אימייל</p>
             <input type="email" ref={emailRef} required />
           </div>
           <div id="password">
-            <p>סיסמא</p>
             <input type="password" ref={passwordRef} required />
           </div>
+          <div>
+            <Link to="/forgot-password">שכחתי סיסמא</Link>
+          </div>
           <button disabled={loading} type="submit">
-            התחבר
+            כניסה
           </button>
         </form>
-        <div>
-          <Link to="/forgot-password">שכחת סיסמא?</Link>
-        </div>
       </div>
-      <div>
-        אין לך חשבון? <Link to="/signup">הרשמה</Link>
+      <div className="login-screen-text">
+        עוד לא נרשמת? הרשם<Link to="/signup"> כאן </Link>
       </div>
     </div>
   );

@@ -21,9 +21,9 @@ export default function Dashboard() {
   return (
     <div>
       <div>
-        <h2>Profile</h2>
+        <h2>פרופיל</h2>
         {error && <p variant="danger">{error}</p>}
-        <strong>Email:</strong> {currentUser.email}
+        <strong>אימייל:</strong> {currentUser.email}
         <Link to="/update-profile">עדכן פרופיל</Link>
       </div>
       <div>

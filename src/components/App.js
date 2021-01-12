@@ -8,11 +8,13 @@ import PrivateRoute from "./PrivateRoute";
 import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile";
 import "./App.css";
+import LogoBar from "./LogoBar";
 
 function App() {
   return (
     <div className="app">
       <div>
+        <LogoBar />
         <Router>
           <AuthProvider>
             <Switch>
