@@ -9,12 +9,13 @@ import ForgotPassword from "./ForgotPassword";
 import UpdateProfile from "./UpdateProfile";
 import "./App.css";
 import LogoBar from "./LogoBar";
+import NaviBar from "./NaviBar";
 
 function App() {
   return (
     <div className="app">
       <div>
-        <LogoBar />
+        <NaviBar />
         <Router>
           <AuthProvider>
             <Switch>
@@ -26,6 +27,7 @@ function App() {
             </Switch>
           </AuthProvider>
         </Router>
+        <LogoBar />
       </div>
     </div>
   );

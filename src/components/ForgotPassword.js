@@ -24,7 +24,6 @@ export default function ForgotPassword() {
 
     setLoading(false);
   }
-
   return (
     <div>
       <div>

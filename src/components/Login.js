@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Link, useHistory } from "react-router-dom";
+import firebase from "firebase/app";
+import "firebase/auth";
 
 export default function Login() {
   const emailRef = useRef();
@@ -25,6 +27,31 @@ export default function Login() {
     setLoading(false);
   }
 
+  async function googleLogIn() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    firebase
+      .auth()
+      .signInWithPopup(provider)
+      .then((result) => {
+        /** @type {firebase.auth.OAuthCredential} */
+        var credential = result.credential;
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+      })
+      .catch((error) => {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+      });
+  }
+
   return (
     <div>
       <div>
@@ -33,21 +60,36 @@ export default function Login() {
         {error && <p variant="danger">{error}</p>}
         <form onSubmit={handleSubmit}>
           <div id="email">
-            <input type="email" ref={emailRef} required />
+            <input type="email" placeholder="אימייל" ref={emailRef} required />
           </div>
           <div id="password">
-            <input type="password" ref={passwordRef} required />
+            <input
+              type="password"
+              placeholder="סיסמא"
+              ref={passwordRef}
+              required
+            />
           </div>
           <div>
             <Link to="/forgot-password">שכחתי סיסמא</Link>
           </div>
-          <button disabled={loading} type="submit">
+          <button className="login-button" disabled={loading} type="submit">
             כניסה
           </button>
         </form>
       </div>
       <div className="login-screen-text">
-        עוד לא נרשמת? הרשם<Link to="/signup"> כאן </Link>
+        עוד לא נרשמת? הרשם
+        <Link to="/signup">
+          {" "}
+          <p id="here-word-box">כאן</p>{" "}
+        </Link>
+      </div>
+      <div>
+        <button id="goole-login-button" type="button" onClick={googleLogIn}>
+          <img src="photos\Google-Button.png" alt="google login img" />
+          <p id="google-login-text"> התחבר עם גוגל </p>
+        </button>
       </div>
     </div>
   );
