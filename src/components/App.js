@@ -10,12 +10,14 @@ import UpdateProfile from "./UpdateProfile";
 import "./App.css";
 import LogoBar from "./LogoBar";
 import NaviBar from "./NaviBar";
+import MapSheet from "./MapSheet";
+import Farmers from "./Farmers";
 
 function App() {
   return (
     <div className="app">
       <div>
-        <NaviBar />
+        
         <Router>
           <AuthProvider>
             <Switch>
@@ -24,8 +26,11 @@ function App() {
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               <Route path="/forgot-password" component={ForgotPassword} />
+              <Route path="/map" component={MapSheet} />
+              <Route path="/farmers" component={Farmers} />
             </Switch>
           </AuthProvider>
+          <NaviBar />
         </Router>
         <LogoBar />
       </div>

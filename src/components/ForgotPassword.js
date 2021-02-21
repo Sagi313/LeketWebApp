@@ -27,7 +27,7 @@ export default function ForgotPassword() {
   return (
     <div>
       <div>
-        <h2>העמותה למען חיות הבר</h2>
+        <h2>לקט ישראל</h2>
         <h2>שכחת סיסמא?</h2>
         {error && <p variant="danger">{error}</p>}
         {message && <p variant="success">{message}</p>}

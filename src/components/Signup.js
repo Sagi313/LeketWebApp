@@ -9,13 +9,10 @@ export default function Signup() {
   const passwordRef = useRef();
   const passwordConfirmRef = useRef();
   const phoneNumberRef = useRef();
-  const movingAnimalsBoxRef = useRef();
-  const birthDateRef = useRef();
   const fullNameRef = useRef();
   const { signup } = useAuth();
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
-  const [profileImg] = useState("photos/profile pic.png");
   const history = useHistory();
 
   async function addtoDB(user) {
@@ -28,24 +25,13 @@ export default function Signup() {
         .database()
         .ref("/user/" + token)
         .set({
-          birthdate: birthDateRef.current.value,
           phone: phoneNumberRef.current.value,
-          movinganimals: movingAnimalsBoxRef.current.value,
         });
     } else {
       console.log("Bug");
     }
   }
 
-  function imageHandler(e) {
-    const reader = new FileReader();
-    reader.onload = () => {
-      if (reader.readyState === 2) {
-        this.setState({ profileImg: reader.result });
-      }
-    };
-    reader.readAsDataURL(e.target.files[0]);
-  }
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -70,24 +56,8 @@ export default function Signup() {
 
   return (
     <div>
-      <div className="container">
-        <div className="img-holder">
-          <img src={profileImg} />
-        </div>
-        <label className="custom-file-upload">
-          <input
-            className="change-profile-img"
-            type="file"
-            accept="image/*"
-            name="image-upload"
-            onChange={imageHandler}
-          />
-        </label>
-      </div>
 
       <div>
-        <h2>העמותה למען חיות הבר</h2>
-
         <h2>הרשמה</h2>
         {error && <p variant="danger">{error}</p>}
         <form onSubmit={handleSubmit}>
@@ -118,15 +88,7 @@ export default function Signup() {
             />
             <p className="Signup-info-text">טלפון</p>
           </div>
-          <div className="register-field">
-            <input
-              className="signup-input"
-              type="date"
-              ref={birthDateRef}
-              required
-            />
-            <p className="Signup-info-text">תאריך לידה</p>
-          </div>
+          
           <div className="register-field">
             <input
               className="signup-input"
@@ -135,7 +97,7 @@ export default function Signup() {
               required
             />
             <p className="Signup-info-text">סיסמא</p>
-          </div>
+            </div>
           <div className="register-field">
             <input
               className="signup-input"
@@ -144,18 +106,6 @@ export default function Signup() {
               required
             />
             <p className="Signup-info-text">אימות סיסמא</p>
-          </div>
-          <div>
-            <input
-              className="check-box"
-              type="checkbox"
-              ref={movingAnimalsBoxRef}
-            ></input>
-            <p className="check-box-text">אני מעוניין/ת להתנדב לשינוע חיות</p>
-          </div>
-          <div>
-            <p className="check-box-text">תנאי ההסכמה </p>
-            <p className="check-box-text"> בלחיצה על ההרשמה אני מאשר/ת את</p>
           </div>
           <button disabled={loading} type="submit">
             הרשמה

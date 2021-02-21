@@ -1,31 +1,8 @@
-.app {
-  background: transparent linear-gradient(158deg, #ffffff8c 0%, #ffffffbf 100%)
-    0% 0% no-repeat padding-box;
-  border-radius: 22px;
-  opacity: 0.9;
-}
-
-body {
-  background: transparent
-    linear-gradient(
-      229deg,
-      var(--unnamed-color-57d18c) 0%,
-      var(--unnamed-color-39524f) 100%
-    )
-    0% 0% no-repeat padding-box;
-  background: transparent linear-gradient(229deg, #57d18c 0%, #39524f 100%) 0%
-    0% no-repeat padding-box;
-  border: 1px solid #707070;
-}
 
 .Signup-info-text {
   display: inline-block;
 }
-.signup-input {
-}
 
-.register-field {
-}
 .navi-bar {
   width: 1820px;
   height: 62px;
@@ -40,21 +17,6 @@ input {
   text-align: center;
 }
 
-button {
-  width: 165px;
-  height: 48px;
-  background: var(--unnamed-color-39524f) 0% 0% no-repeat padding-box;
-  background: #39524f 0% 0% no-repeat padding-box;
-  box-shadow: 0px 3px 6px #00000029;
-  border-radius: 10px;
-
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-600)
-    22px / var(--unnamed-line-spacing-30) var(--unnamed-font-family-segoe-ui);
-  letter-spacing: var(--unnamed-character-spacing-0);
-  color: var(--unnamed-color-ffffff);
-  font: normal normal 600 22px/30px Segoe UI;
-  color: #ffffff;
-}
 h2 {
   font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-bold)
     var(--unnamed-font-size-34) / var(--unnamed-line-spacing-46)
@@ -106,33 +68,12 @@ a {
   text-decoration: none;
 }
 
-#goole-login-button {
-  top: 718px;
-  left: 850px;
-  width: 220px;
-  height: 48px;
-  display: inline-block;
-  white-space: nowrap;
-}
-
 .logo-bar {
+  width: 30%;
+  height: 30%;
   text-align: left;
 }
 
-#google-login-text {
-  display: inline-block;
-}
-
-.check-box {
-  display: inline-block;
-}
-.check-box-text {
-  display: inline-block;
-}
-
-.change-profile-img {
-  display: none;
-}
 
 .custom-file-upload {
   top: 297px;
@@ -146,9 +87,6 @@ a {
   cursor: pointer;
 }
 
-button:hover {
-  box-shadow: 0px 3px 22px #00000094;
-}
 
 .empty-btn {
   background-color: rgb(181, 205, 194);
@@ -160,4 +98,118 @@ button:hover {
 
 .volunteer-btn {
   width: 205px;
+}
+
+.farmer-block-button{
+  width: 400px;
+  height: 200px;
+  background: #FFFFFF;
+  color:black;
+  display:flex;
+  left: 50%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 3px 1px rgba(0, 0, 0, 0.12), 0px 1px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  
+}
+
+.right-farmer-block{
+  display: inline-block;
+
+
+}
+
+.left-farmer-block{
+  display: inline-block;
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  /* identical to box height, or 150% */
+  
+  text-align: right;
+  letter-spacing: 0.25px;
+  
+  /* Black */
+  
+  color: #111111;
+
+
+}
+.farmer-uper-block{
+  display: inline;
+
+}
+.button-a-z{
+  
+background: #EEEEEE;
+/* Stroke ES */
+border: 1px solid #C9C9C9;
+box-sizing: border-box;
+border-radius: 85px;
+font-family: Assistant;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+/* identical to box height, or 114% */
+
+letter-spacing: 0.5px;
+text-transform: uppercase;
+
+/* Black */
+
+color: #111111;
+  
+}
+.button-new-old{
+
+background: #EEEEEE;
+/* Stroke ES */
+
+border: 1px solid #C9C9C9;
+box-sizing: border-box;
+border-radius: 85px;
+font-family: Assistant;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 16px;
+/* identical to box height, or 114% */
+
+letter-spacing: 0.5px;
+text-transform: uppercase;
+
+/* Black */
+
+color: #111111;
+  }
+
+  
+  .button-last-month{
+  
+    background: #EEEEEE;
+    /* Stroke ES */
+    border: 1px solid #C9C9C9;
+    box-sizing: border-box;
+    border-radius: 85px;
+    font-family: Assistant;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    /* identical to box height, or 114% */
+    
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    
+    /* Black */
+    
+    color: #111111;
+    }
+
+    
+.nav-bar-button{
+  background-color:white ;
+  width: 50%;
 }
